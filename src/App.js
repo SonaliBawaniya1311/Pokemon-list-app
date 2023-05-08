@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+// import React, { useState } from 'react';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+// import InfiniteScroll from 'react-infinite-scroll-component';
 import './App.css';
 
-function App() {
+import Home from './Home';
+import Pokemon from './Pokemon';
+
+const App = () => {
+//   const [dataSource,setdataSource]=useState(Array.from({length:20}));
+//   const [hasMore,sethasMore]=useState(true)
+//   const fetchMoreData=()=>{
+//   setTimeout(()=>{
+//     setdataSource(dataSource.concat(Array.from({length:20})))
+//   },500);
+// }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <InfiniteScroll dataLength={dataSource.length} next={fetchMoreData} hasMore={hasMore}>
+      {dataSource.map((item,index)=>{
+          return <div> this is {index+1}</div>
+        })
+      }
+    </InfiniteScroll> */}
+    <Router>
+      <Routes>
+      <Route exact path="/" element={<Home/>} />
+      <Route exact path="/pokemon/:name" element={<Pokemon/>} />
+      </Routes>
+    </Router>
+    </>
   );
-}
+};
 
 export default App;

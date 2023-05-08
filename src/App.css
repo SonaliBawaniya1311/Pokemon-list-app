@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+body{
+  text-align: center;
+  font-size: 25px;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.search-bar {
+  height: 20px;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 2;
+}
+.nameDiv{
+  font-size: 30px;
+  border: 2px solid black;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 44%;
+  border-radius: 7%;
+  text-align: left;
+ 
+}
